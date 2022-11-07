@@ -1,9 +1,10 @@
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 # binary.py
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
 import sys
-import stdio
+
+from stdlib import stdio
 
 # Accept integer n as a command-line argument. Write the binary
 # representation of n to standard output.
@@ -14,7 +15,7 @@ n = int(sys.argv[1])
 
 # Compute v as the largest power of 2 <= n.
 v = 1
-while v <= n//2:
+while v <= n // 2:
     v *= 2
 
 # Cast out powers of 2 in decreasing order.
@@ -28,7 +29,7 @@ while v > 0:
 
 stdio.writeln()
 
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
 # python binary.py 19
 # 10011

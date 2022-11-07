@@ -1,14 +1,15 @@
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 # compareadocuments.py
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
 import sys
-import stdarray
-import stdio
-from instream import InStream
-from sketch import Sketch
 
-#-----------------------------------------------------------------------
+from sketch import Sketch
+from stdlib import stdarray
+from stdlib import stdio
+from stdlib.instream import InStream
+
+# -----------------------------------------------------------------------
 
 # Accept integers k and d as command-line arguments. Read a document
 # list from standard input, compute profiles based on k-gram
@@ -25,7 +26,7 @@ sketches = stdarray.create1D(len(filenames))
 for i in range(len(filenames)):
     text = InStream(filenames[i]).read_all()
     sketches[i] = Sketch(text, k, d)
-    
+
 stdio.write('    ')
 for i in range(len(filenames)):
     stdio.writef('%8.4s', filenames[i])
@@ -36,8 +37,8 @@ for i in range(len(filenames)):
     for j in range(len(filenames)):
         stdio.writef('%8.2f', sketches[i].similarTo(sketches[j]))
     stdio.writeln()
-    
-#-----------------------------------------------------------------------
+
+# -----------------------------------------------------------------------
 
 # more documents.txt 
 # constitution.txt

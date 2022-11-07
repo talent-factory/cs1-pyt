@@ -1,13 +1,15 @@
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 # brownian.py
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
-import sys
 import math
-import stddraw
-import stdrandom
+import sys
 
-#-----------------------------------------------------------------------
+from stdlib import stddraw
+from stdlib import stdrandom
+
+
+# -----------------------------------------------------------------------
 
 # Draw a Brownian bridge from (x0, y0) to (x1, y1) with the given
 # variance and scaleFactor.
@@ -19,10 +21,11 @@ def curve(x0, y0, x1, y1, variance, scaleFactor):
     xm = (x0 + x1) / 2.0
     ym = (y0 + y1) / 2.0
     delta = stdrandom.gaussian(0, math.sqrt(variance))
-    curve(x0, y0, xm, ym+delta, variance/scaleFactor, scaleFactor)
-    curve(xm, ym+delta, x1, y1, variance/scaleFactor, scaleFactor)
+    curve(x0, y0, xm, ym + delta, variance / scaleFactor, scaleFactor)
+    curve(xm, ym + delta, x1, y1, variance / scaleFactor, scaleFactor)
 
-#-----------------------------------------------------------------------
+
+# -----------------------------------------------------------------------
 
 # Accept a Hurst exponent as a command-line argument.
 # Use the Hurst exponent to compute a scale factor.
@@ -37,10 +40,11 @@ def main():
     curve(0, .5, 1.0, .5, .01, scaleFactor)
     stddraw.show()
 
+
 if __name__ == '__main__':
     main()
 
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
 # python brownian.py 1
 

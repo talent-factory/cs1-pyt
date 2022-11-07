@@ -1,8 +1,9 @@
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 # body.py
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
-import stddraw
+from stdlib import stddraw
+
 
 class Body:
 
@@ -11,8 +12,8 @@ class Body:
     # v, and whose mass is specified by float mass.
 
     def __init__(self, r, v, mass):
-        self._r = r        # Position
-        self._v = v        # Velocity
+        self._r = r  # Position
+        self._v = v  # Velocity
         self._mass = mass  # Mass
 
     # Move self by applying the force specified by Vector object

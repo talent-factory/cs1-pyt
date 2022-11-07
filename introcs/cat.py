@@ -1,23 +1,24 @@
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 # cat.py
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
 import sys
-from instream import InStream
-from outstream import OutStream
+
+from stdlib.instream import InStream
+from stdlib.outstream import OutStream
 
 # Copy files or web pages whose names are given by sys.argv[1:n-2]
 # to the file whose name is given by sys.argv[n-1].
 
-inFilenames = sys.argv[1:len(sys.argv)-1]
-outFilename = sys.argv[len(sys.argv)-1]
+inFilenames = sys.argv[1:len(sys.argv) - 1]
+outFilename = sys.argv[len(sys.argv) - 1]
 outstream = OutStream(outFilename)
 for filename in inFilenames:
     instream = InStream(filename)
     s = instream.read_all()
     outstream.write(s)
 
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
 # more in1.txt
 # This is
@@ -32,4 +33,3 @@ for filename in inFilenames:
 # This is
 # a tiny
 # test.
-

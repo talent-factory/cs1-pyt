@@ -1,8 +1,8 @@
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 # average.py
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
-import stdio
+from stdlib import stdio
 
 # Read floats from the standard input stream until end-of-file.
 # Write to standard output the average of those floats.
@@ -16,7 +16,7 @@ while not stdio.is_empty():
 avg = total / count
 stdio.writeln('Average is ' + str(avg))
 
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
 # python average.py
 # 10.0 5.0 6.0
@@ -31,4 +31,3 @@ stdio.writeln('Average is ' + str(avg))
 
 # python randomseq.py 1000 | python average.py
 # Average is 0.49712655575298226
-

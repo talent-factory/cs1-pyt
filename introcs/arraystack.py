@@ -1,42 +1,43 @@
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 # arraystack.py
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
-import stdio
+from stdlib import stdio
+
 
 # A Stack object is a last-in-first-out collection.
 
 class Stack:
 
-    #-------------------------------------------------------------------
+    # -------------------------------------------------------------------
 
     # Construct an empty Stack object.
 
     def __init__(self):
         self._a = []  # Items
 
-    #-------------------------------------------------------------------
+    # -------------------------------------------------------------------
 
     # Return True if self is empty, and False otherwise.
 
     def isEmpty(self):
         return len(self._a) == 0
 
-    #-------------------------------------------------------------------
+    # -------------------------------------------------------------------
 
     # Push object item onto the top of self.
 
     def push(self, item):
         self._a += [item]
 
-    #-------------------------------------------------------------------
+    # -------------------------------------------------------------------
 
     # Pop the top object from self and return it.
 
     def pop(self):
         return self._a.pop()
 
-    #-------------------------------------------------------------------
+    # -------------------------------------------------------------------
 
     # Return a string representation self.
 
@@ -44,11 +45,12 @@ class Stack:
         s = ''
         for item in self._a:
             s = str(item) + ' ' + s
-        #for item in reversed(self._a):
+        # for item in reversed(self._a):
         #    s += str(item) + ' '
         return s
 
-#-----------------------------------------------------------------------
+
+# -----------------------------------------------------------------------
 
 # Test the Stack class by reading strings from standard input and
 # pushing or popping as indicated. A minus sign indicates pop (and
@@ -64,14 +66,14 @@ def main():
             stdio.write(stack.pop() + ' ')
     stdio.writeln()
 
+
 if __name__ == '__main__':
     main()
-    
-#-----------------------------------------------------------------------
+
+# -----------------------------------------------------------------------
 
 # more tobe.txt
 # to be or not to - be - - that - - - is
 
 # python3.4 arraystack.py < tobe.txt 
 # to be not that or be
-

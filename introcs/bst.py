@@ -1,6 +1,6 @@
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 # bst.py
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
 # An OrderedSymbolTable object is a collection of key-value pairs that
 # is kept in order by key. This implementation uses a binary search
@@ -8,14 +8,14 @@
 
 class OrderedSymbolTable:
 
-    #-------------------------------------------------------------------
+    # -------------------------------------------------------------------
 
     # Construct a new OrderedSymbolTable object.
 
     def __init__(self):
         self._root = None  # Reference to root _Node object
 
-    #-------------------------------------------------------------------
+    # -------------------------------------------------------------------
 
     # Search the subtree of self whose root is x for a _Node object
     # with the given key.  If found, return that _Node object's value;
@@ -31,12 +31,12 @@ class OrderedSymbolTable:
         else:
             return x.val
 
-   # Return the value associated with key in self.
+    # Return the value associated with key in self.
 
     def __getitem__(self, key):
         return self._get(self._root, key)
 
-    #-------------------------------------------------------------------
+    # -------------------------------------------------------------------
 
     # x is the root of a subtree self.  If a _Node object with
     # the given key exists in that subtree, then set its
@@ -60,7 +60,7 @@ class OrderedSymbolTable:
     def __setitem__(self, key, val):
         self._root = self._set(self._root, key, val)
 
-    #-------------------------------------------------------------------
+    # -------------------------------------------------------------------
 
     # Search the subtree of self whose root is x for a _Node object
     # with the given key.  If found, return True; otherwise return
@@ -80,7 +80,7 @@ class OrderedSymbolTable:
     def __contains__(self, key):
         return self._contains(self._root, key)
 
-    #-------------------------------------------------------------------
+    # -------------------------------------------------------------------
 
     # Populate list a with all keys in the subtree of self whose
     # root is x.
@@ -99,7 +99,8 @@ class OrderedSymbolTable:
         self._inorder(self._root, a)
         return iter(a)
 
-#-----------------------------------------------------------------------
+
+# -----------------------------------------------------------------------
 
 # A _Node object references a key, a value, and left and right
 # children _Node objects.  An OrderedSymTable object is composed of
@@ -107,17 +108,17 @@ class OrderedSymbolTable:
 
 class _Node:
     def __init__(self, key, val):
-        self.key = key    # Reference to key
-        self.val = val    # Reference to value
+        self.key = key  # Reference to key
+        self.val = val  # Reference to value
         self.left = None  # Reference to left child _Node object
-        self.right = None # Reference to right child _Node object
+        self.right = None  # Reference to right child _Node object
 
-#-----------------------------------------------------------------------
+
+# -----------------------------------------------------------------------
 
 # For testing.
 
 def main():
-
     import stdio
 
     # Test the constructor.
@@ -147,10 +148,11 @@ def main():
     for key in st:
         stdio.writeln(key + ': ' + st[key])
 
+
 if __name__ == '__main__':
     main()
 
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
 # python bst.py
 # Bob
@@ -161,4 +163,3 @@ if __name__ == '__main__':
 # Dondero: Bob
 # Sedgewick: Bob
 # Wayne: Kevin
-

@@ -1,11 +1,12 @@
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 # couponcollector.py
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
-import stdio
-import sys
-import stdarray
 import random
+import sys
+
+from stdlib import stdarray
+from stdlib import stdio
 
 # Accept integer n as a command-line argument. Write to standard
 # output the number of coupons you collect before obtaining one of
@@ -27,7 +28,7 @@ while collectedCount < n:
 
 stdio.writeln(count)
 
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
 # python couponcollector.py 1000
 # 8507
