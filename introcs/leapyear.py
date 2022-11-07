@@ -1,8 +1,8 @@
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 # leapyear.py
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
-import stdio
+from stdlib import stdio
 import sys
 
 # Accept an int year as a command-line argument. Write True to
@@ -12,11 +12,11 @@ year = int(sys.argv[1])
 
 isLeapYear = (year % 4 == 0)
 isLeapYear = isLeapYear and (year % 100 != 0)
-isLeapYear = isLeapYear or  (year % 400 == 0)
+isLeapYear = isLeapYear or (year % 400 == 0)
 
 stdio.writeln(isLeapYear)
 
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
 # python leapyear.py 2016    
 # True
