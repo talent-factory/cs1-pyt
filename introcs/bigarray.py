@@ -8,7 +8,7 @@ from stdlib import stdarray
 from stdlib import stdio
 
 n = int(sys.argv[1])
-a = stdarray.create1D(n, 0)
+a = stdarray.create1d(n, 0)
 stdio.writeln('finished')
 
 # -----------------------------------------------------------------------

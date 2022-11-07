@@ -13,19 +13,20 @@ from stdlib import stdio
 n = int(sys.argv[1])
 
 # Initially assume all integers are prime.
-isPrime = stdarray.create1D(n + 1, True)
+is_prime = stdarray.create1d(n + 1, True)
 
 # Mark non-primes <= n using the Sieve of Eratosthenes.
+# https://de.wikipedia.org/wiki/Sieb_des_Eratosthenes
 for i in range(2, n):
-    if isPrime[i]:
+    if is_prime[i]:
         # Mark multiples of i as nonprime.
         for j in range(2, n // i + 1):
-            isPrime[i * j] = False
+            is_prime[i * j] = False
 
 # Count the primes.
 count = 0
 for i in range(2, n + 1):
-    if isPrime[i]:
+    if is_prime[i]:
         count += 1
 
 stdio.writeln(count)

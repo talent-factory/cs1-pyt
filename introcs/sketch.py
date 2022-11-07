@@ -16,7 +16,7 @@ class Sketch:
     # d. Element i of the vector should indicate how many k-grams
     # in the file (or web page) hash to i.
     def __init__(self, text, k, d):
-        freq = stdarray.create1D(d, 0)
+        freq = stdarray.create1d(d, 0)
         for i in range(len(text) - k + 1):
             kgram = text[i:i+k]
             h = hash(kgram)

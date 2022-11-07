@@ -16,7 +16,7 @@ n = int(sys.argv[1])
 
 count = 0
 collectedCount = 0
-isCollected = stdarray.create1D(n, False)
+isCollected = stdarray.create1d(n, False)
 
 while collectedCount < n:
     # Generate another coupon.

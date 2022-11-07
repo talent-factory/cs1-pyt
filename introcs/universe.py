@@ -22,7 +22,7 @@ class Universe:
         radius = instream.read_float()
         stddraw.setXscale(-radius, +radius)
         stddraw.setYscale(-radius, +radius)
-        self._bodies = stdarray.create1D(n)
+        self._bodies = stdarray.create1d(n)
         for i in range(n):
             rx   = instream.read_float()
             ry   = instream.read_float()
@@ -39,7 +39,7 @@ class Universe:
         
         # Initialize the forces to zero.
         n = len(self._bodies)
-        f = stdarray.create1D(n, Vector([0, 0]))
+        f = stdarray.create1d(n, Vector([0, 0]))
         
         # Compute the forces.
         for i in range(n):

@@ -12,7 +12,7 @@ import stdaudio
 # Superpose arrays a and b, weighted by aWeight and bWeight.
 
 def superpose(a, b, aWeight, bWeight):
-    c = stdarray.create1D(len(a), 0.0)
+    c = stdarray.create1d(len(a), 0.0)
     for i in range(len(a)):
         c[i] = a[i]*aWeight + b[i]*bWeight
     return c
@@ -25,7 +25,7 @@ def superpose(a, b, aWeight, bWeight):
 def tone(hz, t):
     SPS = 44100
     n = int(SPS * t)
-    a = stdarray.create1D(n+1, 0.0)
+    a = stdarray.create1d(n + 1, 0.0)
     for i in range(n+1):
         a[i] = math.sin(2.0 * math.pi * i * hz / SPS)
     return a

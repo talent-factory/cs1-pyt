@@ -20,17 +20,17 @@ stdio.read_int() # Discard the second int of standard input.
 # Read the transition matrix from standard input.
 # probs[i][j] is the probability that the surfer moves from
 # page i to page j.
-probs = stdarray.create2D(n, n, 0.0)
+probs = stdarray.create2d(n, n, 0.0)
 for i in range(n):
     for j in range(n):
         probs[i][j] = stdio.read_float()
 
 # Use the power method to compute page ranks.
-ranks = stdarray.create1D(n, 0.0)
+ranks = stdarray.create1d(n, 0.0)
 ranks[0] = 1.0
 for i in range(moves):
     # Compute effect of next move on page ranks.
-    newRanks = stdarray.create1D(n, 0.0)
+    newRanks = stdarray.create1d(n, 0.0)
     for j in range(n):
         # New rank of page j is dot product
         # of old ranks and column j of probs.

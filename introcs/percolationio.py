@@ -12,7 +12,7 @@ import stdrandom
 # Return a random n-by-n matrix, each entry True with probability p.
 
 def random(n, p):
-    a = stdarray.create2D(n, n, False)
+    a = stdarray.create2d(n, n, False)
     for i in range(n):
         for j in range(n):
             a[i][j] = stdrandom.bernoulli(p)

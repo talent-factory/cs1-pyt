@@ -23,21 +23,21 @@ class Vector:
 
     # Return the sum of self and Vector object other.
     def __add__(self, other):
-        result = stdarray.create1D(self._n, 0)
+        result = stdarray.create1d(self._n, 0)
         for i in range(self._n):
             result[i] = self._coords[i] + other._coords[i]
         return Vector(result)
 
     # Return the difference of self and Vector object other.
     def __sub__(self, other):
-        result = stdarray.create1D(self._n, 0)
+        result = stdarray.create1d(self._n, 0)
         for i in range(self._n):
             result[i] = self._coords[i] - other._coords[i]
         return Vector(result)
 
     # Return the product of self and numeric object alpha.
     def scale(self, alpha):
-        result = stdarray.create1D(self._n, 0)
+        result = stdarray.create1d(self._n, 0)
         for i in range(self._n):
             result[i] = alpha * self._coords[i]
         return Vector(result)

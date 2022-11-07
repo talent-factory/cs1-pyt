@@ -13,7 +13,7 @@ import stdio
 
 def flow(isOpen):
     n = len(isOpen)
-    isFull = stdarray.create2D(n, n, False)
+    isFull = stdarray.create2d(n, n, False)
     for j in range(n):
         isFull[0][j] = isOpen[0][j]
     for i in range(1, n):

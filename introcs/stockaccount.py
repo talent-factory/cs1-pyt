@@ -21,9 +21,9 @@ class StockAccount:
         self._cash = inStream.read_float()     # Cash balance
         self._stockCount = inStream.read_int() # Number of stocks
         # Stock symbols
-        self._stocks = stdarray.create1D(self._stockCount, 0)
+        self._stocks = stdarray.create1d(self._stockCount, 0)
         # Share counts
-        self._shares = stdarray.create1D(self._stockCount, 0)
+        self._shares = stdarray.create1d(self._stockCount, 0)
         for i in range(self._stockCount):
             self._shares[i] = inStream.read_int()
             self._stocks[i] = inStream.read_string()

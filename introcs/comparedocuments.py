@@ -21,7 +21,7 @@ k = int(sys.argv[1])
 d = int(sys.argv[2])
 
 filenames = stdio.read_all_strings()
-sketches = stdarray.create1D(len(filenames))
+sketches = stdarray.create1d(len(filenames))
 
 for i in range(len(filenames)):
     text = InStream(filenames[i]).read_all()

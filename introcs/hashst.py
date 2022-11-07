@@ -15,8 +15,8 @@ class SymbolTable:
     
     def __init__(self, m=1024):
         self._m = m
-        self._keys = stdarray.create2D(m, 0)
-        self._vals = stdarray.create2D(m, 0)
+        self._keys = stdarray.create2d(m, 0)
+        self._vals = stdarray.create2d(m, 0)
         
     #-------------------------------------------------------------------
 

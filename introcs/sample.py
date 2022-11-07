@@ -15,7 +15,7 @@ m = int(sys.argv[1]) # choose this many elements
 n = int(sys.argv[2]) # from 0, 1, ..., n-1
 
 # Initialize perm.
-perm = stdarray.create1D(n, 0)
+perm = stdarray.create1d(n, 0)
 for i in range(n):
     perm[i] = i
 

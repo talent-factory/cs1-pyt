@@ -18,7 +18,7 @@ MAX_GRAY_SCALE = 255
 
 # Read charges from standard input into an array.
 n = stdio.read_int()
-charges = stdarray.create1D(n)
+charges = stdarray.create1d(n)
 for i in range(n):
     x0 = stdio.read_float()
     y0 = stdio.read_float()

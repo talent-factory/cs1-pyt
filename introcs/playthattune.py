@@ -20,7 +20,7 @@ while not stdio.is_empty():
     duration = stdio.read_float()
     hz = CONCERT_A * (2.0 ** (pitch / NOTES_ON_SCALE))
     n = int(SPS * duration)
-    note = stdarray.create1D(n+1, 0.0)
+    note = stdarray.create1d(n + 1, 0.0)
     for i in range(n+1):
         note[i] = math.sin(2.0 * math.pi * i * hz / SPS)
     stdaudio.playSamples(note)

@@ -36,7 +36,7 @@ def _flow(isOpen, isFull, i, j):
 
 def flow(isOpen):
     n = len(isOpen)
-    isFull = stdarray.create2D(n, n, False)
+    isFull = stdarray.create2d(n, n, False)
     for j in range(n):
         _flow(isOpen, isFull, 0, j)
     return isFull

@@ -20,7 +20,7 @@ def getCoupon(n):
 # 0 to n-1.  Return the number of coupons collected.
 
 def collect(n):
-    found = stdarray.create1D(n, False)
+    found = stdarray.create1d(n, False)
     couponCount = 0
     distinctCouponCount = 0
     while distinctCouponCount < n:

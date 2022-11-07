@@ -15,7 +15,7 @@ class Histogram:
     # Construct self such that it can store n frequency counts.
     def __init__(self, n):
         # Frequency counts.
-        self._freqCounts = stdarray.create1D(n, 0)
+        self._freqCounts = stdarray.create1d(n, 0)
 
     # Add one occurrence of the value i to self.
     def addDataPoint(self, i):
