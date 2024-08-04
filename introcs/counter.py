@@ -1,21 +1,21 @@
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 # counter.py
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
-import sys
-import stdio
-#import stdarray
-import stdrandom
+from stdlib.stdio import writeln
+from stdlib.stdrandom import bernoulli
 
+
+# noinspection PyProtectedMember,PyShadowingBuiltins
 class Counter:
 
-    def __init__(self, id, maxCount):
-        self._name = id            # Counter name
-        self._maxCount = maxCount  # Maximum value
-        self._count = 0            # Value
+    def __init__(self, id, max_count):
+        self._name = id  # Counter name
+        self._max_count = max_count  # Maximum value
+        self._count = 0  # Value
 
     def increment(self):
-        if self._count < self._maxCount:
+        if self._count < self._max_count:
             self._count += 1
 
     def value(self):
@@ -42,7 +42,8 @@ class Counter:
     def __ge__(self, other):
         return self._count >= other._count
 
-#-----------------------------------------------------------------------
+
+# -----------------------------------------------------------------------
 
 # For testing.
 # Accept integer command-line argument n and float command-line
@@ -50,26 +51,26 @@ class Counter:
 # Write to standard output the number of heads and tails.
 
 def main():
+    n = 1000  # int(sys.argv[1])
+    p = 0.5   # float(sys.argv[2])
 
-    n = int(sys.argv[1])
-    p = float(sys.argv[2])
-    
     heads = Counter('Heads', n)
     tails = Counter('Tails', n)
-    
+
     for i in range(n):
-        if stdrandom.bernoulli(p):
+        if bernoulli(p):
             heads.increment()
         else:
             tails.increment()
-    
-    stdio.writeln(heads)
-    stdio.writeln(tails)
+
+    writeln(heads)
+    writeln(tails)
+
 
 if __name__ == '__main__':
     main()
 
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
 # python counter.py 1000 .5
 # Heads: 483
@@ -82,4 +83,3 @@ if __name__ == '__main__':
 # python counter.py 1000 .3
 # Heads: 280
 # Tails: 720
-

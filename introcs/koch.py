@@ -25,9 +25,9 @@ def koch(n, stepSize, myTurtle):
 # order n to standard draw.
 
 n = int(sys.argv[1])
-stddraw.setCanvasSize(512, 256)
-stddraw.setYscale(-.1, 0.4)
-stddraw.setPenRadius(0.0)
+stddraw.set_canvas_size(512, 256)
+stddraw.set_yscale(-.1, 0.4)
+stddraw.set_pen_radius(0.0)
 stddraw.clear(stddraw.LIGHT_GRAY)
 stepSize = 1.0 / (3.0 ** n)
 myTurtle = Turtle(0.0, 0.0, 0.0)

@@ -48,7 +48,7 @@ for col in range(n):
         color = Color(gray, gray, gray)
         pic.set(col, n-1-row, color)
 
-stddraw.setCanvasSize(n, n)
+stddraw.set_canvas_size(n, n)
 stddraw.picture(pic)
 stddraw.show()
 

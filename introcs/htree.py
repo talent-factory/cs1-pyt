@@ -34,7 +34,7 @@ def draw(n, lineLength, x, y):
 
 def main():
     n = int(sys.argv[1])
-    stddraw.setPenRadius(0.0)
+    stddraw.set_pen_radius(0.0)
     draw(n, .5, .5, .5)
     stddraw.show()
 

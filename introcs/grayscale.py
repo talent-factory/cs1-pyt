@@ -21,7 +21,7 @@ for col in range(pic.width()):
         gray = luminance.toGray(pixel)
         pic.set(col, row, gray)
 
-stddraw.setCanvasSize(pic.width(), pic.height())
+stddraw.set_canvas_size(pic.width(), pic.height())
 stddraw.picture(pic)
 stddraw.show()
 

@@ -15,7 +15,7 @@ from stopwatch import Stopwatch
 
 def timeTrials(f, n, trials):
     total = 0.0
-    a = stdarray.create1d(n, 0.0)
+    a = stdarray.create_1d(n, 0.0)
     for t in range(trials):
         for i in range(n):
             a[i] = stdrandom.uniformFloat(0.0, 1.0)

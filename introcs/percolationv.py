@@ -13,7 +13,7 @@ import stdio
 
 def flow(isOpen):
     n = len(isOpen)
-    isFull = stdarray.create2d(n, n, False)
+    isFull = stdarray.create_2d(n, n, False)
     for j in range(n):
         isFull[0][j] = isOpen[0][j]
     for i in range(1, n):
@@ -48,8 +48,8 @@ def percolates(isOpen):
 # True if the system percolates and False otherwise.
 
 def main():
-    isOpen = stdarray.readBool2D()
-    stdarray.write2D(flow(isOpen))
+    isOpen = stdarray.read_bool_2d()
+    stdarray.write_2d(flow(isOpen))
     stdio.writeln(percolates(isOpen))
     
 if __name__ == '__main__':

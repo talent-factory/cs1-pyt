@@ -114,7 +114,7 @@ def _read_reg_exp(reg_exp):
 def is_empty():
     """
     Return True if no non-whitespace characters remain in standard
-    input. Otherwise return False.
+    input. Otherwise, return False.
     """
     global _buffer
     while _buffer.strip() == '':

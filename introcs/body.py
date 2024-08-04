@@ -36,5 +36,5 @@ class Body:
     # Draw self to standard draw.
 
     def draw(self):
-        stddraw.setPenRadius(0.0125)
+        stddraw.set_pen_radius(0.0125)
         stddraw.point(self._r[0], self._r[1])

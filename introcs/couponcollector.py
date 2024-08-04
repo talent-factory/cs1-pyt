@@ -5,8 +5,7 @@
 import random
 import sys
 
-from stdlib import stdarray
-from stdlib import stdio
+from stdlib import stdarray, stdio
 
 # Accept integer n as a command-line argument. Write to standard
 # output the number of coupons you collect before obtaining one of
@@ -16,7 +15,7 @@ n = int(sys.argv[1])
 
 count = 0
 collectedCount = 0
-isCollected = stdarray.create1d(n, False)
+isCollected = stdarray.create_1d(n, False)
 
 while collectedCount < n:
     # Generate another coupon.

@@ -6,10 +6,7 @@ import math
 import sys
 
 import gaussian
-from stdlib import stdarray
-from stdlib import stddraw
-from stdlib import stdrandom
-from stdlib import stdstats
+from stdlib import stdarray, stddraw, stdstats, stdrandom
 
 # -----------------------------------------------------------------------
 
@@ -23,24 +20,24 @@ from stdlib import stdstats
 n = int(sys.argv[1])
 trials = int(sys.argv[2])
 
-freq = stdarray.create1d(n + 1, 0)
+freq = stdarray.create_1d(n + 1, 0)
 for t in range(trials):
     heads = stdrandom.binomial(n, 0.5)
     freq[heads] += 1
 
-norm = stdarray.create1d(n + 1, 0.0)
+norm = stdarray.create_1d(n + 1, 0.0)
 for i in range(n + 1):
     norm[i] = 1.0 * freq[i] / trials
 
-phi = stdarray.create1d(n + 1, 0.0)
+phi = stdarray.create_1d(n + 1, 0.0)
 stddev = math.sqrt(n) / 2.0
 for i in range(n + 1):
     phi[i] = gaussian.pdf(i, n / 2.0, stddev)
 
-stddraw.setCanvasSize(1000, 400)
-stddraw.setYscale(0, 1.1 * max(max(norm), max(phi)))
-stdstats.plotBars(norm)
-stdstats.plotLines(phi)
+stddraw.set_canvas_size(1000, 400)
+stddraw.set_yscale(0, 1.1 * max(max(norm), max(phi)))
+stdstats.plot_bars(norm)
+stdstats.plot_lines(phi)
 stddraw.show()
 
 # -----------------------------------------------------------------------

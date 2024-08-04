@@ -2,10 +2,10 @@
 # helloworld.py
 # -----------------------------------------------------------------------
 
-from stdlib import stdio
+from stdlib.stdio import writeln
 
 # Write 'Hello, World' to standard output.
-stdio.writeln('Hello, World')
+writeln('Hello, World')
 
 # -----------------------------------------------------------------------
 

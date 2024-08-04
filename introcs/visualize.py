@@ -21,9 +21,9 @@ def main():
     for i in range(trials):
         isOpen = percolationio.random(n, p)
         stddraw.clear()
-        stddraw.setPenColor(stddraw.BLACK)
+        stddraw.set_pen_color(stddraw.BLACK)
         percolationio.draw(isOpen, False)
-        stddraw.setPenColor(stddraw.BLUE)
+        stddraw.set_pen_color(stddraw.BLUE)
         full = percolation.flow(isOpen)
         percolationio.draw(full, True)
         stddraw.show(1000.0)

@@ -1,10 +1,10 @@
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 # loadbalance.py
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
 import sys
-import stddraw
-import stdstats
+from stdlib import stddraw
+from stdlib import stdstats
 from linkedqueue import Queue
 from randomqueue import RandomQueue
 
@@ -34,16 +34,17 @@ for j in range(itemCount):
     best.enqueue(j)
 
 lengths = []
+
 while not servers.is_empty():
     lengths += [len(servers.dequeue())]
+
 stddraw.clear(stddraw.LIGHT_GRAY)
-stddraw.setYscale(0, 2.0*itemCount/serverCount)
-stdstats.plotBars(lengths)
+stddraw.set_yscale(0, 2.0 * itemCount / serverCount)
+stdstats.plot_bars(lengths)
 stddraw.show()
 
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
 # python loadbalance.py 50 500 1
 
 # python loadbalance.py 50 500 2
-

@@ -15,7 +15,7 @@ class Histogram:
     # Construct self such that it can store n frequency counts.
     def __init__(self, n):
         # Frequency counts.
-        self._freqCounts = stdarray.create1d(n, 0)
+        self._freqCounts = stdarray.create_1d(n, 0)
 
     # Add one occurrence of the value i to self.
     def addDataPoint(self, i):
@@ -23,8 +23,8 @@ class Histogram:
 
     # Draw self.
     def draw(self):
-        stddraw.setYscale(0, max(self._freqCounts))
-        stdstats.plotBars(self._freqCounts)
+        stddraw.set_yscale(0, max(self._freqCounts))
+        stdstats.plot_bars(self._freqCounts)
 
 #-----------------------------------------------------------------------
 
@@ -43,7 +43,7 @@ def main():
         heads = stdrandom.binomial(n, p)
         histogram.addDataPoint(heads)
   
-    stddraw.setCanvasSize(500, 200)
+    stddraw.set_canvas_size(500, 200)
     stddraw.clear(stddraw.LIGHT_GRAY)
     histogram.draw()
     stddraw.show()

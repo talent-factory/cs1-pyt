@@ -23,19 +23,19 @@ g2 = int(sys.argv[5])
 b2 = int(sys.argv[6])
 c2 = Color(r2, g2, b2)
 
-stddraw.setCanvasSize(512, 256)
-stddraw.setYscale(.25, .75)
+stddraw.set_canvas_size(512, 256)
+stddraw.set_yscale(.25, .75)
 
-stddraw.setPenColor(c1)
+stddraw.set_pen_color(c1)
 stddraw.filledSquare(.25, .5, .2)
 
-stddraw.setPenColor(c2)
+stddraw.set_pen_color(c2)
 stddraw.filledSquare(.25, .5, .1)
 
-stddraw.setPenColor(c2)
+stddraw.set_pen_color(c2)
 stddraw.filledSquare(.75, .5, .2)
 
-stddraw.setPenColor(c1)
+stddraw.set_pen_color(c1)
 stddraw.filledSquare(.75, .5, .1)
 
 stddraw.show()

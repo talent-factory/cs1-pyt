@@ -13,8 +13,8 @@ import stdarray
 
 n = stdio.read_int()
 
-linkCounts = stdarray.create2d(n, n, 0)
-outDegrees = stdarray.create1d(n, 0)
+linkCounts = stdarray.create_2d(n, n, 0)
+outDegrees = stdarray.create_1d(n, 0)
 
 while not stdio.is_empty():
     # Accumulate link counts.

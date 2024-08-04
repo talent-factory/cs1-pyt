@@ -4,8 +4,7 @@
 
 import sys
 
-from stdlib import instream
-from stdlib import stdio
+from stdlib import instream, stdio
 
 
 # -----------------------------------------------------------------------

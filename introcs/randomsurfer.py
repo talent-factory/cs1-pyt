@@ -20,14 +20,14 @@ stdio.read_int() # Discard the second int of standard input.
 # Read the transition matrix from standard input.
 # p[i][j] is the probability that the surfer moves from
 # page i to page j.
-p = stdarray.create2d(n, n, 0.0)
+p = stdarray.create_2d(n, n, 0.0)
 for i in range(n):
     for j in range(n):
         p[i][j] = stdio.read_float()
 
 # Perform the simulation, thus computing the hits array.
 # hits[i] is the number of times the surfer hits page i.
-hits = stdarray.create1d(n, 0)
+hits = stdarray.create_1d(n, 0)
 page = 0  # Start at page 0.
 for i in range(moves):
     # Make one random move.

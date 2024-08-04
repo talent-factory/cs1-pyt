@@ -15,9 +15,9 @@ from turtle import Turtle
 turtleCount = int(sys.argv[1])
 stepCount = int(sys.argv[2])
 stepSize = float(sys.argv[3])
-stddraw.setPenRadius(0.0)
+stddraw.set_pen_radius(0.0)
 stddraw.clear(stddraw.LIGHT_GRAY)
-turtles = stdarray.create1d(turtleCount)
+turtles = stdarray.create_1d(turtleCount)
 for i in range(turtleCount):
     x = stdrandom.uniformFloat(0.0, 1.0)
     y = stdrandom.uniformFloat(0.0, 1.0)

@@ -18,7 +18,7 @@ def main():
     x = 0.0
     y = 0.0
 
-    stddraw.setPenRadius(0.0)
+    stddraw.set_pen_radius(0.0)
     for i in range(n):
         r = stdrandom.uniformInt(0, 3)
         x = (x + cx[r]) / 2.0
