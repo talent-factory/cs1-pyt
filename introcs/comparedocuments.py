@@ -5,8 +5,7 @@
 import sys
 
 from sketch import Sketch
-from stdlib import stdarray
-from stdlib import stdio
+from stdlib import stdarray, stdio
 from stdlib.instream import InStream
 
 # -----------------------------------------------------------------------
@@ -21,7 +20,7 @@ k = int(sys.argv[1])
 d = int(sys.argv[2])
 
 filenames = stdio.read_all_strings()
-sketches = stdarray.create1d(len(filenames))
+sketches = stdarray.create_1d(len(filenames))
 
 for i in range(len(filenames)):
     text = InStream(filenames[i]).read_all()

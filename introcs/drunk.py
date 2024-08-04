@@ -16,7 +16,7 @@ from turtle import Turtle
 
 stepCount = int(sys.argv[1])
 stepSize = float(sys.argv[2])
-stddraw.setPenRadius(0.0)
+stddraw.set_pen_radius(0.0)
 stddraw.clear(stddraw.LIGHT_GRAY)
 myTurtle = Turtle(0.5, 0.5, 0.0)
 for i in range(stepCount):

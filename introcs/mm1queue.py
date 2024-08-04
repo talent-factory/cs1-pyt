@@ -16,7 +16,7 @@ mu = float(sys.argv[2])    # Service rate
 
 histogram = Histogram(60 + 1)
 queue = Queue()
-stddraw.setCanvasSize(700, 500)
+stddraw.set_canvas_size(700, 500)
 
 # Compute time of next arrival.
 nextArrival = stdrandom.exp(lamb)

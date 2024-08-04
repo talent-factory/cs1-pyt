@@ -23,7 +23,7 @@ angle = 360.0 / n
 step = math.sin(math.radians(angle/2.0))
 turtle = Turtle(0.5, 0, angle/2.0)
 
-stddraw.setPenRadius(0.0)
+stddraw.set_pen_radius(0.0)
 stddraw.clear(stddraw.LIGHT_GRAY)
 for i in range(wraps * n):
     step /= decay

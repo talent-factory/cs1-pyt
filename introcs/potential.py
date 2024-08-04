@@ -18,7 +18,7 @@ MAX_GRAY_SCALE = 255
 
 # Read charges from standard input into an array.
 n = stdio.read_int()
-charges = stdarray.create1d(n)
+charges = stdarray.create_1d(n)
 for i in range(n):
     x0 = stdio.read_float()
     y0 = stdio.read_float()
@@ -47,7 +47,7 @@ for col in range(pic.width()):
         pic.set(col, pic.height()-1-row, color)
 
 # Draw the Picture.
-stddraw.setCanvasSize(pic.width(), pic.height())
+stddraw.set_canvas_size(pic.width(), pic.height())
 stddraw.picture(pic)
 stddraw.show()
 

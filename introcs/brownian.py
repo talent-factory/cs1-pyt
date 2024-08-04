@@ -5,8 +5,7 @@
 import math
 import sys
 
-from stdlib import stddraw
-from stdlib import stdrandom
+from stdlib import stddraw, stdrandom
 
 
 # -----------------------------------------------------------------------
@@ -34,7 +33,7 @@ def curve(x0, y0, x1, y1, variance, scaleFactor):
 
 def main():
     hurstExponent = float(sys.argv[1])
-    stddraw.setPenRadius(0.0)
+    stddraw.set_pen_radius(0.0)
     stddraw.clear(stddraw.LIGHT_GRAY)
     scaleFactor = 2 ** (2.0 * hurstExponent)
     curve(0, .5, 1.0, .5, .01, scaleFactor)

@@ -25,7 +25,7 @@ for tCol in range(w):
         sRow = tRow * source.height() // h
         target.set(tCol, tRow, source.get(sCol, sRow))
 
-stddraw.setCanvasSize(w, h)
+stddraw.set_canvas_size(w, h)
 stddraw.picture(target)
 stddraw.show()
 

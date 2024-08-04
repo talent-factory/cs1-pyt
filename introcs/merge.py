@@ -49,7 +49,7 @@ def _sort(a, lo, hi, aux):
 
 def sort(a):
     n = len(a)
-    aux = stdarray.create1d(n)
+    aux = stdarray.create_1d(n)
     _sort(a, 0, n, aux)
 
 #-----------------------------------------------------------------------

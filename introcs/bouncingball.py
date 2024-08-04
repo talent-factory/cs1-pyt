@@ -9,8 +9,8 @@ from stdlib import stddraw
 RADIUS = .05
 DT = 20.0
 
-stddraw.setXscale(-1.0, 1.0)
-stddraw.setYscale(-1.0, 1.0)
+stddraw.set_xscale(-1.0, 1.0)
+stddraw.set_yscale(-1.0, 1.0)
 
 rx = .480
 ry = .860

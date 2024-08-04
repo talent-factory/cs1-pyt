@@ -4,11 +4,10 @@
 
 import sys
 
-from stdlib import stdarray
-from stdlib import stdio
+from stdlib import stdarray, stdio
 
 n = int(sys.argv[1])
-a = stdarray.create1d(n, 0)
+a = stdarray.create_1d(n, 0)
 stdio.writeln('finished')
 
 # -----------------------------------------------------------------------

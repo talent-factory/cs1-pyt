@@ -15,7 +15,7 @@ from stopwatch import Stopwatch
 # of size n.
 
 def timeTrial(n):
-    a = stdarray.create1d(n, 0)
+    a = stdarray.create_1d(n, 0)
     for i in range(n):
         a[i] = stdrandom.uniformInt(-1000000, 1000000)
     watch = Stopwatch()

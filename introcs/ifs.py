@@ -16,12 +16,12 @@ import stddraw
 
 def main():
     n = int(sys.argv[1])
-    dist = stdarray.readFloat1D()
-    cx = stdarray.readFloat2D()
-    cy = stdarray.readFloat2D()
+    dist = stdarray.read_float_1d()
+    cx = stdarray.read_float_2d()
+    cy = stdarray.read_float_2d()
     x = 0.0
     y = 0.0
-    stddraw.setPenRadius(0.0)
+    stddraw.set_pen_radius(0.0)
     for i in range(n):
         r = stdrandom.discrete(dist)
         x0 = cx[r][0]*x + cx[r][1]*y + cx[r][2]

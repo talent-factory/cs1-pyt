@@ -22,7 +22,7 @@ fieldCount = int(sys.argv[2])
 inStream = InStream(fileName + '.csv')
 
 # Create output streams.
-outStreams = stdarray.create1d(fieldCount)
+outStreams = stdarray.create_1d(fieldCount)
 for i in range(fieldCount):
     file = OutStream(fileName + str(i) + '.txt')
     outStreams[i] = file

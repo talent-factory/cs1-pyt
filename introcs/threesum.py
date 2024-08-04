@@ -38,7 +38,7 @@ def countTriples(a):
 # the count is low, then also write the triples.
 
 def main():
-    a = stdarray.readInt1D()
+    a = stdarray.read_int_1d()
     count = countTriples(a)
     stdio.writeln(count)
     if count < 10:

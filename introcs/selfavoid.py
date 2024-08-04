@@ -18,7 +18,7 @@ deadEnds = 0
 for t in range(trials):
 
     # Create an n-by-n array, with all elements set to False.
-    a = stdarray.create2d(n, n, False)
+    a = stdarray.create_2d(n, n, False)
 
     x = n//2
     y = n//2

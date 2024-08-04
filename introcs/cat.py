@@ -5,7 +5,7 @@
 import sys
 
 from stdlib.instream import InStream
-from stdlib.outstream import OutStream
+from stdlib import OutStream
 
 # Copy files or web pages whose names are given by sys.argv[1:n-2]
 # to the file whose name is given by sys.argv[n-1].

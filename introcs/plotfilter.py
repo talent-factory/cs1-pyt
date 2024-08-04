@@ -14,11 +14,11 @@ y0 = stdio.read_float()
 x1 = stdio.read_float()
 y1 = stdio.read_float()
 
-stddraw.setXscale(x0, x1)
-stddraw.setYscale(y0, y1)
+stddraw.set_xscale(x0, x1)
+stddraw.set_yscale(y0, y1)
 
 # Read and plot the points.
-stddraw.setPenRadius(0.0)
+stddraw.set_pen_radius(0.0)
 while not stdio.is_empty():
     x = stdio.read_float()
     y = stdio.read_float()

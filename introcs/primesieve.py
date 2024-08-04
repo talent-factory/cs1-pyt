@@ -4,8 +4,7 @@
 
 import sys
 
-from stdlib import stdarray
-from stdlib import stdio
+from stdlib import stdarray, stdio
 
 # Accept integer n as a command-line argument. Write to standard
 # output the number of primes <= n.
@@ -13,7 +12,7 @@ from stdlib import stdio
 n = int(sys.argv[1])
 
 # Initially assume all integers are prime.
-is_prime = stdarray.create1d(n + 1, True)
+is_prime = stdarray.create_1d(n + 1, True)
 
 # Mark non-primes <= n using the Sieve of Eratosthenes.
 # https://de.wikipedia.org/wiki/Sieb_des_Eratosthenes

@@ -37,7 +37,7 @@ target = Picture(targetFile)
 width = source.width()
 height = source.height()
 
-stddraw.setCanvasSize(width, height)
+stddraw.set_canvas_size(width, height)
 
 pic = Picture(width, height)
 
