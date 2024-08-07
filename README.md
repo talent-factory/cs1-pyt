@@ -1,4 +1,4 @@
-# Introduction to Programmin in Python · Computer Science
+# Introduction to Programming in Python · Computer Science
 
 ---
 
